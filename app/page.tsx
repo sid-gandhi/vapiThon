@@ -1,26 +1,12 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Orb from "@/components/orb";
+import Orb from "@/components/vapi/orb";
+import RetroCard from "@/components/RetroCard";
+import Siri from "@/components/vapi/siri";
 
 export default function Home() {
   return (
-    <main className="flex flex-col h-full items-center justify-between p-1">
-      <div className={styles.description}>
-        <p>
-          Add VapiBlocks components to your Next.js project&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vapiblocks.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Orb by VapiBlocks
-          </a>
-        </div>
-      </div>
-      <Orb />
+    <main className="w-full min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+      <RetroCard />
+      <Siri theme="ios9" />
     </main>
   );
 }
